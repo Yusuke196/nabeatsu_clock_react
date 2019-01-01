@@ -1,13 +1,13 @@
 {
-  "main.css": "/static/css/main.84ee8721.chunk.css",
-  "main.js": "/static/js/main.194741cc.chunk.js",
-  "main.js.map": "/static/js/main.194741cc.chunk.js.map",
-  "static/js/1.4a34e45d.chunk.js": "/static/js/1.4a34e45d.chunk.js",
-  "static/js/1.4a34e45d.chunk.js.map": "/static/js/1.4a34e45d.chunk.js.map",
-  "runtime~main.js": "/static/js/runtime~main.229c360f.js",
-  "runtime~main.js.map": "/static/js/runtime~main.229c360f.js.map",
-  "static/css/main.84ee8721.chunk.css.map": "/static/css/main.84ee8721.chunk.css.map",
-  "index.html": "/index.html",
-  "precache-manifest.069ce32bc64509a4a3d80f4d2fe9489c.js": "/precache-manifest.069ce32bc64509a4a3d80f4d2fe9489c.js",
-  "service-worker.js": "/service-worker.js"
+  "main.css": "/nabeatsu_clock_react/static/css/main.84ee8721.chunk.css",
+  "main.js": "/nabeatsu_clock_react/static/js/main.194741cc.chunk.js",
+  "main.js.map": "/nabeatsu_clock_react/static/js/main.194741cc.chunk.js.map",
+  "static/js/1.4a34e45d.chunk.js": "/nabeatsu_clock_react/static/js/1.4a34e45d.chunk.js",
+  "static/js/1.4a34e45d.chunk.js.map": "/nabeatsu_clock_react/static/js/1.4a34e45d.chunk.js.map",
+  "runtime~main.js": "/nabeatsu_clock_react/static/js/runtime~main.415869d3.js",
+  "runtime~main.js.map": "/nabeatsu_clock_react/static/js/runtime~main.415869d3.js.map",
+  "static/css/main.84ee8721.chunk.css.map": "/nabeatsu_clock_react/static/css/main.84ee8721.chunk.css.map",
+  "index.html": "/nabeatsu_clock_react/index.html",
+  "precache-manifest.019990796f2849dcb018e1c64ed00361.js": "/nabeatsu_clock_react/precache-manifest.019990796f2849dcb018e1c64ed00361.js",
+  "service-worker.js": "/nabeatsu_clock_react/service-worker.js"
 }
