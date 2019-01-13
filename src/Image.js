@@ -1,8 +1,7 @@
 import React from 'react'
 
-const Image = () => {
-  const sec = new Date().getSeconds()
-  console.log(sec)
+const Image = ({ datetime }) => {
+  const sec = datetime.second()
   if ((sec % 3 === 0 && sec !== 0) || (sec.toString().indexOf(3) !== -1)) {
     return (
       <div className='image'>

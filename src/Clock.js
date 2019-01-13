@@ -1,46 +1,31 @@
 import React from 'react'
+import 'moment/locale/ja'
+import 'moment/locale/zh-cn'
+import 'moment/locale/fr'
 
-const Clock = ({ lang }) => {
-  let d = new Date()
-  let date = null
-  let time = null
-  let second = null
+const Clock = ({ lang, datetime }) => {
+  if (lang === 'ch') {
+    lang = 'zh-cn'
+  }
+
+  let date = datetime.locale(lang).format('llll')
+  let time = datetime.locale(lang).format('LT')
+  let second = datetime.locale(lang).second()
   let str = null
-  const digit2 = num => {
-    const s = '00' + num
-    return s.substr(s.length - 2, 2)
+
+  // 曜日を表示させるため上でMomentオブジェクトにformat('llll')メソッドを使っているが、これだと表示されてしまう時間の部分を、dateから取り除く処理
+  if (lang === 'ja' || lang === 'zh-cn') {
+    const array = date.split(' ')
+    date = array[0]
+  } else {
+    const array = date.split(' ')
+    date = array.slice(0, 4).join(' ')
   }
 
-  switch (lang) {
-    case 'ja':
-      date = d.toLocaleDateString() + ' ' + ['(日)', '(月)', '(火)', '(水)', '(木)', '(金)', '(土)'][d.getDay()]
-      time = d.getHours() + '時' + d.getMinutes() + '分...'
-      second = d.getSeconds()
-      break
-    case 'en':
-      d.setHours(d.getHours() - 14)
-      date = d.toLocaleDateString() + ' ' + ['(Sun)', '(Mon)', '(Tue)', '(Wen)', '(Thu)', '(Fri)', '(Sat)'][d.getDay()]
-      time = digit2(d.getHours()) + ':' + digit2(d.getMinutes()) + '...'
-      second = d.getSeconds()
-      break
-    case 'ch':
-      d.setHours(d.getHours() - 1)
-      date = d.toLocaleDateString() + ' ' + ['(日)', '(一)', '(二)', '(三)', '(四)', '(五)', '(六)'][d.getDay()]
-      time = d.getHours() + '点' + d.getMinutes() + '分...'
-      second = d.getSeconds()
-      break
-    case 'fr':
-      d.setHours(d.getHours() - 8)
-      date = d.toLocaleDateString() + ' ' + ['(Dim)', '(Lun)', '(Mar)', '(Mer)', '(Jeu)', '(Ven)', '(Sam)'][d.getDay()]
-      time = digit2(d.getHours()) + ':' + digit2(d.getMinutes()) + '...'
-      second = d.getSeconds()
-      break
-    default:
-      break
-  }
+  // console.log(lang, datetime.locale(lang).format('llll'))
 
   if ((second % 3 === 0 && second !== 0) || (second.toString().indexOf(3) !== -1)) {
-    if (lang === 'ja' || lang === 'ch') {
+    if (lang === 'ja' || lang === 'zh-cn') {
       str = second.toString() + '秒！'
     } else {
       str = second.toString() + ' !'
