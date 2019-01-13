@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/nabeatsu_clock_react/precache-manifest.019990796f2849dcb018e1c64ed00361.js"
+  "/nabeatsu_clock_react/precache-manifest.ed23946552ef782250b9563f7ca00919.js"
 );
 
 workbox.clientsClaim();
