@@ -49,9 +49,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="container">
-        <h2 id="description">
-          <Desc lang={this.state.lang} />
-        </h2>
+        <Desc lang={this.state.lang} />
         <Image datetime={this.state.datetime} />
         <div className="clock">
           <Clock lang={this.state.lang} datetime={this.state.datetime} />
